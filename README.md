@@ -70,29 +70,32 @@ You should add `{!! Alert::message() !!}` to your html.
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Laravel Toastr Alert Notification</title>
-    <!-- Alert style CDN -->
-    <link
-      rel="stylesheet"
-      href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"
-    />
-  </head>
-  <body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel Alert</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css" />
+</head>
+
+<body>
 
     <!-- Main Contents -->
+    <h1>Laravel Toastr Alert Notification</h1>
 
     <!-- jQuery CDN -->
-    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 
-    <!-- Alert script CDN -->
-    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <!-- Toastr script CDN -->
+    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
-    <!-- Alert Scripts render -->
+    <!-- Toastr Scripts render -->
     {!! Alert::message() !!}
 
-  </body>
+</body>
+
 </html>
+
 ```
 
 ### MIT
