@@ -1,12 +1,10 @@
-Inspired in whossun/laravel-alert..
-
-# Laravel Alert Alert System
+# Laravel Toastr JS Alert System
 
 ### Installation
 
 Using Composer ^2.0
 
-    composer require idemonbd/laravel-alert
+    composer require idemonbd/laralert
 
 ### Laravel ^5.5
 

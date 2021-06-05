@@ -10,13 +10,13 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "idemonbd",
+            "name": "Emon Khan",
             "email": "bdemon00@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "idemonbd\\Alert\\": "src/"
+            "idemonbd\\laralert\\": "src/"
         },
         "files": [
             "src/helper.php"
@@ -25,10 +25,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "idemonbd\\Alert\\AlertServiceProvider"
+                "idemonbd\\laralert\\AlertServiceProvider"
             ],
             "aliases": {
-                "Alert": "idemonbd\\Alert\\Facades\\Alert"
+                "Alert": "idemonbd\\laralert\\Facades\\Alert"
             }
         }
     },
