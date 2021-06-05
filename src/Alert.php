@@ -1,6 +1,6 @@
 <?php
 
-namespace idemonbd\Alert;
+namespace idemonbd\laralert;
 
 use Illuminate\Session\SessionManager as Session;
 use Illuminate\Config\Repository as Config;

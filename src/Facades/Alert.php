@@ -1,6 +1,6 @@
 <?php
 
-namespace idemonbd\Alert\Facades;
+namespace idemonbd\laralert\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,5 +1,5 @@
 <?php
-namespace idemonbd\Alert;
+namespace idemonbd\laralert;
 
 use Illuminate\Support\ServiceProvider;
 
