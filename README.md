@@ -15,20 +15,20 @@ That's it! The package is auto-discovered on 5.5 and up!
 Add the service provider to `config/app.php`
 
 ```php
-idemonbd\Alert\AlertServiceProvider::class,
+idemonbd\laralert\AlertServiceProvider::class,
 ```
 
 Optionally include the Facade in config/app.php if you'd like.
 
 ```php
-'Alert'  => idemonbd\Alert\Facades\Alert::class,
+'Alert'  => idemonbd\laralert\Facades\Alert::class,
 ```
 
 ### Options
 
 You can set custom options for Reminder. Run:
 
-    php artisan vendor:publish --provider=idemonbd\Alert\AlertServiceProvider
+    php artisan vendor:publish --provider=idemonbd\laralert\AlertServiceProvider
 
 to publish the config file for alert.
 
