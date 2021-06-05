@@ -1,0 +1,42 @@
+{
+    "name": "idemonbd/laralert",
+    "description": "Toastr JS Alert System for Laravel",
+    "keywords": [
+        "alert",
+        "notification",
+        "laravel"
+    ],
+    "homepage": "https://github.com/idemonbd/laralert",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "idemonbd",
+            "email": "bdemon00@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "idemonbd\\Alert\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "idemonbd\\Alert\\AlertServiceProvider"
+            ],
+            "aliases": {
+                "Alert": "idemonbd\\Alert\\Facades\\Alert"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/support": ">=5.2.7",
+        "illuminate/session": ">=5.2.7"
+    },
+    "prefer-stable": true
+}
