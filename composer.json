@@ -1,12 +1,12 @@
 {
-    "name": "idemonbd/laralert",
-    "description": "Toastr JS Alert System for Laravel",
+    "name": "idemonbd/notify",
+    "description": "Toastr Notifcation for Laravel",
     "keywords": [
-        "alert",
+        "toastr",
         "notification",
         "laravel"
     ],
-    "homepage": "https://github.com/idemonbd/laralert",
+    "homepage": "https://github.com/idemonbd/notify",
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "idemonbd\\laralert\\": "src/"
+            "Idemonbd\\Notify\\": "src/"
         },
         "files": [
             "src/helper.php"
@@ -25,10 +25,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "idemonbd\\laralert\\AlertServiceProvider"
+                "Idemonbd\\Notify\\NotifyServiceProvider"
             ],
             "aliases": {
-                "Alert": "idemonbd\\laralert\\Facades\\Alert"
+                "Notify": "Idemonbd\\Notify\\Facades\\Notify"
             }
         }
     },

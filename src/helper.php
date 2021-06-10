@@ -1,13 +1,13 @@
 <?php
 
-if (! function_exists('alert')) {
+if (! function_exists('notify')) {
     /**
-     * Return the instance of alert.
+     * Return the instance of notify.
      *
-     * @return idemonbd\Alert\Alert
+     * @return Idemonbd\Notify\Notify
      */
-    function alert()
+    function notify()
     {
-        return app('alert');
+        return app('notify');
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace idemonbd\laralert;
+namespace Idemonbd\Notify;
 
 use Illuminate\Session\SessionManager as Session;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Support\MessageBag;
 
-class Alert
+class Notify
 {
     /**
      * The session manager.
@@ -36,7 +36,7 @@ class Alert
 
     public function message()
     {
-        $messages = $this->session->get('alert::messages');
+        $messages = $this->session->get('notify::messages');
 
         if (! $messages) $messages = [];
 
@@ -93,7 +93,7 @@ class Alert
             'options' => $options,
         ];
 
-        $this->session->flash('alert::messages', $this->messages);
+        $this->session->flash('notify::messages', $this->messages);
     }
 
     /**

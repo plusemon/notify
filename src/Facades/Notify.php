@@ -1,13 +1,13 @@
 <?php
 
-namespace idemonbd\laralert\Facades;
+namespace Idemonbd\Notify\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Alert extends Facade
+class Notify extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'alert';
+        return 'notify';
     }
 }

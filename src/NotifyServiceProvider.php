@@ -1,9 +1,9 @@
 <?php
-namespace idemonbd\laralert;
+namespace Idemonbd\Notify;
 
 use Illuminate\Support\ServiceProvider;
 
-class AlertServiceProvider extends ServiceProvider
+class NotifyServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -13,7 +13,7 @@ class AlertServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/alert.php' => config_path('alert.php'),
+            __DIR__ . '/config/notify.php' => config_path('notify.php'),
             ], 'config');
     }
 
@@ -24,8 +24,8 @@ class AlertServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('alert', function ($app) {
-            return new Alert($app['session'], $app['config']);
+        $this->app->singleton('notify', function ($app) {
+            return new Notify($app['session'], $app['config']);
         });
     }
 
@@ -36,6 +36,6 @@ class AlertServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['alert'];
+        return ['notify'];
     }
 }
