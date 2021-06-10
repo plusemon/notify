@@ -4,7 +4,7 @@
 
 Using Composer ^2.0
 
-    composer require Idemonbd/Notify
+    composer require idemonbd/notify
 
 ### Laravel ^5.5
 
