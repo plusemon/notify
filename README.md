@@ -6,11 +6,7 @@ Using Composer ^2.0
 
     composer require idemonbd/notify
 
-### Laravel ^5.5
-
-That's it! The package is auto-discovered on 5.5 and up!
-
-### Laravel above 5.4
+### Service Provider (Optional)
 
 Add the service provider to `config/app.php`
 
