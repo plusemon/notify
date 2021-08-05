@@ -1,4 +1,4 @@
-# Laravel Toastr JS Notify System
+# Toastr JS Alert Notification System for PHP/Laravel
 
 
 ### 1. Install
