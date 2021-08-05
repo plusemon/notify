@@ -2,8 +2,9 @@
 
 
 ### 1. Install
-
-    composer require idemonbd/notify
+```
+composer require idemonbd/notify
+```
     
 ### 2. Add resources
 
@@ -21,17 +22,17 @@
 
 <body>
 
-    <!-- Main Contents -->
-    <h1>Laravel Toastr Notify Notification</h1>
+<!-- Main Contents -->
+<h1>Laravel Toastr Notify Notification</h1>
 
-    <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Toastr script CDN -->
-    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+<!-- Toastr script CDN -->
+<script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
-    <!-- Toastr Scripts render -->
-    {!! Notify::message() !!}
+<!-- Toastr Scripts render -->
+{!! Notify::message() !!}
 
 </body>
 
@@ -42,18 +43,20 @@
 
 ### 3. Usage
 
-    <!--  Example   -->
-    Notify::success('You have successfully added Notify alert system');
-    Notify()->info('Info message with helper function');
-    
-    <!--  Using Facade    -->
-    Notify::info('message', 'title', ['options']);
-    Notify::success('message', 'title', ['options']);
-    Notify::warning('message', 'title', ['options']);
-    Notify::error('message', 'title', ['options']);
-    
-    <!--   Clear   -->
-    Notify::clear();
+```php
+<!--  Example   -->
+Notify::success('You have successfully added Notify alert system');
+Notify()->info('Info message with helper function');
+
+<!--  Using Facade    -->
+Notify::info('message', 'title', ['options']);
+Notify::success('message', 'title', ['options']);
+Notify::warning('message', 'title', ['options']);
+Notify::error('message', 'title', ['options']);
+
+<!--   Clear   -->
+Notify::clear();
+```
     
     
 ## You have successfully installed notify system. 😃
