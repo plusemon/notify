@@ -40,7 +40,7 @@
 ```
 
 
-### 3. Usages
+### 3. Usage
 
     <!--  Example   -->
     Notify::success('You have successfully added Notify alert system');
@@ -59,7 +59,7 @@
 ## You have successfully installed notify system. 😃
  
 
-### More Configuration
+### Configuration
 
 Add the service provider to `config/app.php`
 
