@@ -1,68 +1,13 @@
 # Laravel Toastr JS Notify System
 
-### Installation
 
-Using Composer ^2.0
+### 1. Install
 
     composer require idemonbd/notify
+    
+### 2. Add resources
 
-### Service Provider (Optional)
-
-Add the service provider to `config/app.php`
-
-```php
-Idemonbd\Notify\NotifyServiceProvider::class,
-```
-
-Optionally include the Facade in config/app.php if you'd like.
-
-```php
-'Notify'  => Idemonbd\Notify\Facades\Notify::class,
-```
-
-### Options
-
-You can set custom options for Reminder. Run:
-
-    php artisan vendor:publish --provider=Idemonbd\Notify\NotifyServiceProvider
-
-to publish the config file for notify.
-
-You can see [toastr's documentation](http://codeseven.github.io/toastr/demo.html) to custom your need.
-
-> You can use Notify() function available.
-
-### Dependencies
-
-jQuery [toast](https://github.com/CodeSeven/toastr), you need to add css and js to your html.
-
-### Basic Usage
-
-- Notify::info('message', 'title', ['options']);
-
-- Notify::success('message', 'title', ['options']);
-
-- Notify::warning('message', 'title', ['options']);
-
-- Notify::error('message', 'title', ['options']);
-
-- Notify::clear();
-
-- Notify()->info('message', 'title', ['options']);
-
-```php
-<?php
-
-Route::get('/', function () {
-    Notify::success('Notify Message', 'Notify Title', ["positionClass" => "toast-top-center"]);
-    return view('welcome');
-});
-```
-
-Then
-
-You should add `{!! Notify::message() !!}` to your html.
-
+   
 ```html
 <!DOCTYPE html>
 <html>
@@ -93,6 +38,52 @@ You should add `{!! Notify::message() !!}` to your html.
 </html>
 
 ```
+
+
+### 3. Usages
+
+    <!--  Example   -->
+    Notify::success('You have successfully added Notify alert system');
+    Notify()->info('Info message with helper function');
+    
+    <!--  Using Facade    -->
+    Notify::info('message', 'title', ['options']);
+    Notify::success('message', 'title', ['options']);
+    Notify::warning('message', 'title', ['options']);
+    Notify::error('message', 'title', ['options']);
+    
+    <!--   Clear   -->
+    Notify::clear();
+    
+    
+## You have successfully installed notify system. 😃
+ 
+
+### More Configuration
+
+Add the service provider to `config/app.php`
+
+```php
+Idemonbd\Notify\NotifyServiceProvider::class,
+```
+
+Optionally include the Facade in config/app.php if you'd like.
+
+```php
+'Notify'  => Idemonbd\Notify\Facades\Notify::class,
+```
+
+### Options
+
+Publish the config file
+
+    php artisan vendor:publish --provider=Idemonbd\Notify\NotifyServiceProvider
+
+For More visit [toastr's documentation](http://codeseven.github.io/toastr/demo.html) to custom your need.
+
+### Dependencies
+
+jQuery [toast](https://github.com/CodeSeven/toastr), you need to add css and js to your html.
 
 ### MIT
 
