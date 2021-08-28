@@ -43,7 +43,7 @@ class Notify
         $script = '<script type="text/javascript">';
 
         foreach ($messages as $message) {
-           $config = (array) $this->config->get('toastr.options');
+           $config = (array) $this->config->get('notify.options');
 
            if (count($message['options'])) {
                $config = array_merge($config, $message['options']);
