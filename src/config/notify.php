@@ -2,12 +2,13 @@
 
 return [
     'options' => [
+        "tapToDismiss" => false,
         "closeButton" => true,
         "debug" => false,
         "newestOnTop" => false,
         "progressBar" => true,
-        "positionClass" => "toast-top-right",
-        "preventDuplicates" => false,
+        "positionClass" => "toast-bottom-right",
+        "preventDuplicates" => true,
         "onclick" => null,
         "showDuration" => "300",
         "hideDuration" => "1000",
