@@ -46,7 +46,7 @@ composer require idemonbd/notify
 ```php
 <!--  Example   -->
 Notify::success('You have successfully added Notify alert system');
-Notify()->info('Info message with helper function');
+notify()->info('Info message with helper function');
 
 <!--  Using Facade    -->
 Notify::info('message', 'title', ['options']);
@@ -58,6 +58,11 @@ Notify::error('message', 'title', ['options']);
 Notify::clear();
 ```
     
+<!--  redirect - shorter redirect back with notify  -->
+return Notify::info('Info redirect back with message by helper function')->back();
+return notify()->info('Info redirect with message by helper function')->redirect('/');
+
+
     
 ## You have successfully installed notify system. 😃
  
