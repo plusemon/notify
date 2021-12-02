@@ -38,29 +38,27 @@ class Notify
     {
         $messages = $this->session->get('notify::messages');
 
-        if (! $messages) $messages = [];
+        if (!$messages) $messages = [];
 
         $script = '<script type="text/javascript">';
 
         foreach ($messages as $message) {
-           $config = (array) $this->config->get('notify.options');
+            $config = (array) $this->config->get('toastr.options');
 
-           if (count($message['options'])) {
-               $config = array_merge($config, $message['options']);
-           }
+            if (count($message['options'])) {
+                $config = array_merge($config, $message['options']);
+            }
 
-           if ($config) {
-               $script .= 'toastr.options = ' . json_encode($config) . ';';
-           }
+            if ($config) {
+                $script .= 'toastr.options = ' . json_encode($config) . ';';
+            }
 
-           $title = addslashes($message['title']) ?: null;
+            $title = addslashes($message['title']) ?: null;
 
             $script .= 'toastr.' . $message['type'] .
                 '(\'' . addslashes($message['message']) .
                 "','$title" .
                 '\');';
-
-
         }
 
         $script .= '</script>';
@@ -82,7 +80,7 @@ class Notify
     {
         $types = ['error', 'info', 'success', 'warning'];
 
-        if (! in_array($type, $types)) {
+        if (!in_array($type, $types)) {
             throw new Exception("The $type remind message is not valid.");
         }
 
@@ -105,23 +103,22 @@ class Notify
      *
      * @return void
      */
-    public function info($message, $title = null, $options = [])
+    public function info($message, $title = null, $options = []): Object
     {
-		if($message instanceof MessageBag)
-		{
-			$messageString = "";
-			foreach ($message->getMessages() as $messageArray)
-			{
-				foreach ($messageArray as $currentMessage)
-					$messageString .= $currentMessage."<br>";
-			}
+        if ($message instanceof MessageBag) {
+            $messageString = "";
+            foreach ($message->getMessages() as $messageArray) {
+                foreach ($messageArray as $currentMessage)
+                    $messageString .= $currentMessage . "<br>";
+            }
 
-			$this->add('info', rtrim($messageString, "<br>"), $title, $options);
-		}
-		else
-			$this->add('info', $message, $title, $options);
+            $this->add('info', rtrim($messageString, "<br>"), $title, $options);
+        } else {
+            $this->add('info', $message, $title, $options);
+        }
+        return $this;
     }
-    
+
     /**
      * Add a success flash message to session.
      *
@@ -131,21 +128,20 @@ class Notify
      *
      * @return void
      */
-    public function success($message, $title = null, $options = [])
+    public function success($message, $title = null, $options = []): Object
     {
-		if($message instanceof MessageBag)
-		{
-			$messageString = "";
-			foreach ($message->getMessages() as $messageArray)
-			{
-				foreach ($messageArray as $currentMessage)
-					$messageString .= $currentMessage."<br>";
-			}
+        if ($message instanceof MessageBag) {
+            $messageString = "";
+            foreach ($message->getMessages() as $messageArray) {
+                foreach ($messageArray as $currentMessage)
+                    $messageString .= $currentMessage . "<br>";
+            }
 
-			$this->add('success', rtrim($messageString, "<br>"), $title, $options);
-		}
-		else
-			$this->add('success', $message, $title, $options);
+            $this->add('success', rtrim($messageString, "<br>"), $title, $options);
+        } else {
+            $this->add('success', $message, $title, $options);
+        }
+        return $this;
     }
 
     /**
@@ -157,21 +153,20 @@ class Notify
      *
      * @return void
      */
-    public function warning($message, $title = null, $options = [])
+    public function warning($message, $title = null, $options = []): Object
     {
-		if($message instanceof MessageBag)
-		{
-			$messageString = "";
-			foreach ($message->getMessages() as $messageArray)
-			{
-				foreach ($messageArray as $currentMessage)
-					$messageString .= $currentMessage."<br>";
-			}
+        if ($message instanceof MessageBag) {
+            $messageString = "";
+            foreach ($message->getMessages() as $messageArray) {
+                foreach ($messageArray as $currentMessage)
+                    $messageString .= $currentMessage . "<br>";
+            }
 
-			$this->add('warning', rtrim($messageString, "<br>"), $title, $options);
-		}
-		else
-			$this->add('warning', $message, $title, $options);
+            $this->add('warning', rtrim($messageString, "<br>"), $title, $options);
+        } else {
+            $this->add('warning', $message, $title, $options);
+        }
+        return $this;
     }
 
     /**
@@ -183,21 +178,20 @@ class Notify
      *
      * @return void
      */
-    public function error($message, $title = null, $options = [])
+    public function error($message, $title = null, $options = []): Object
     {
-    	if($message instanceof MessageBag)
-		{
-			$messageString = "";
-			foreach ($message->getMessages() as $messageArray)
-			{
-				foreach ($messageArray as $currentMessage)
-					$messageString .= $currentMessage."<br>";
-			}
+        if ($message instanceof MessageBag) {
+            $messageString = "";
+            foreach ($message->getMessages() as $messageArray) {
+                foreach ($messageArray as $currentMessage)
+                    $messageString .= $currentMessage . "<br>";
+            }
 
-			$this->add('error', rtrim($messageString, "<br>"), $title, $options);
-		}
-    	else
-        	$this->add('error', $message, $title, $options);
+            $this->add('error', rtrim($messageString, "<br>"), $title, $options);
+        } else {
+            $this->add('error', $message, $title, $options);
+        }
+        return $this;
     }
 
     /**
@@ -208,5 +202,26 @@ class Notify
     public function clear()
     {
         $this->messages = [];
+    }
+
+
+    /**
+     * redirect back with message
+     *
+     * @return back()
+     */
+    public function back()
+    {
+        return back();
+    }
+
+    /**
+     * redirect back with route
+     *
+     * @return redirect()
+     */
+    public function redirect(string $route = null)
+    {
+        $route ? redirect($route) : back();
     }
 }
