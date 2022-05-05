@@ -1,5 +1,5 @@
 <?php
-namespace Idemonbd\Notify;
+namespace Plusemon\Notify;
 
 use Illuminate\Support\ServiceProvider;
 

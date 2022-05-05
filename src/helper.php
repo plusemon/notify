@@ -4,7 +4,7 @@ if (! function_exists('notify')) {
     /**
      * Return the instance of notify.
      *
-     * @return Idemonbd\Notify\Notify
+     * @return Plusemon\Notify\Notify
      */
     function notify()
     {

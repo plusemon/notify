@@ -3,7 +3,7 @@
 
 ### 1. Install
 ```
-composer require idemonbd/notify
+composer require plusemon/notify
 ```
     
 ### 2. Add resources
@@ -72,20 +72,20 @@ return notify()->info('Info redirect with message by helper function')->redirect
 Add the service provider to `config/app.php`
 
 ```php
-Idemonbd\Notify\NotifyServiceProvider::class,
+Plusemon\Notify\NotifyServiceProvider::class,
 ```
 
 Optionally include the Facade in config/app.php if you'd like.
 
 ```php
-'Notify'  => Idemonbd\Notify\Facades\Notify::class,
+'Notify'  => Plusemon\Notify\Facades\Notify::class,
 ```
 
 ### Options
 
 Publish the config file
 
-    php artisan vendor:publish --provider=Idemonbd\Notify\NotifyServiceProvider
+    php artisan vendor:publish --provider=Plusemon\Notify\NotifyServiceProvider
 
 For More visit [toastr's documentation](http://codeseven.github.io/toastr/demo.html) to custom your need.
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Idemonbd\Notify\Facades;
+namespace Plusemon\Notify\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

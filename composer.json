@@ -1,12 +1,12 @@
 {
-    "name": "idemonbd/notify",
-    "description": "Toastr Notifcation for Laravel",
+    "name": "plusemon/notify",
+    "description": "Flexible Toastr Notifcation Package for PHP Laravel",
     "keywords": [
         "toastr",
         "notification",
         "laravel"
     ],
-    "homepage": "https://github.com/idemonbd/notify",
+    "homepage": "https://github.com/plusemon/notify",
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Idemonbd\\Notify\\": "src/"
+            "Plusemon\\Notify\\": "src/"
         },
         "files": [
             "src/helper.php"
@@ -25,10 +25,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Idemonbd\\Notify\\NotifyServiceProvider"
+                "Plusemon\\Notify\\NotifyServiceProvider"
             ],
             "aliases": {
-                "Notify": "Idemonbd\\Notify\\Facades\\Notify"
+                "Notify": "Plusemon\\Notify\\Facades\\Notify"
             }
         }
     },

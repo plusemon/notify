@@ -1,6 +1,6 @@
 <?php
 
-namespace Idemonbd\Notify;
+namespace Plusemon\Notify;
 
 use Illuminate\Session\SessionManager as Session;
 use Illuminate\Config\Repository as Config;
